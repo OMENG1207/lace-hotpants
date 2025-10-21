@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>lace hotpants — Mocha Modest (Mobile Styled)</title>
+  <meta name="description" content="lace hotpants — Hotpants boxer super jumbo. Lembut, adem, nyaman untuk sehari-hari." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#F6F1EC; /* soft beige */
+      --card:#FFFDFB;
+      --mocha:#A67C58;
+      --muted:#7A6A5A;
+      --accent:#F1DED0;
+      --radius:12px;
+      --shadow:0 12px 40px rgba(40,30,20,0.06);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);-webkit-font-smoothing:antialiased}
+
+    /* container mobile centered */
+    .wrap{max-width:440px;margin:18px auto;padding:12px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+
+    /* hero image — ensure full visible */
+    .hero{background:var(--card)}
+    .hero img{display:block;width:100%;height:auto;object-fit:contain}
+
+    .section{padding:14px}
+    h1{font-size:20px;margin:6px 0;color:var(--mocha)}
+    .lead{font-size:14px;color:var(--muted);margin:6px 0}
+    .desc{font-size:14px;color:#2b2b2b;line-height:1.6}
+
+    .sizes{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+    .size{background:linear-gradient(180deg,var(--accent),#fff);padding:10px;border-radius:10px;border:1px solid rgba(160,130,100,0.06)}
+    .size b{color:var(--mocha);display:block;margin-bottom:6px}
+
+    .details{margin-top:12px}
+    .details h3{margin:0 0 8px;color:var(--mocha)}
+    .details ul{padding-left:16px;margin:0;color:#333}
+    .details li{margin:8px 0}
+
+    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+    .gallery img{width:100%;height:auto;border-radius:8px}
+    .caption{font-size:13px;color:var(--muted);text-align:center;margin-top:6px}
+
+    .testi{margin-top:12px}
+    .bubble{background:linear-gradient(180deg,#fff,#FBF6F2);padding:10px;border-radius:10px;border:1px solid rgba(160,130,110,0.05)}
+    .bubble .name{font-weight:700;color:var(--mocha)}
+    .bubble .text{color:#333;margin-top:6px}
+
+    .timer{display:flex;justify-content:center;gap:10px;margin-top:12px}
+    .timer .box{background:#fff;padding:8px 10px;border-radius:8px;min-width:64px;text-align:center;box-shadow:0 6px 18px rgba(40,30,20,0.04)}
+    .timer .num{font-weight:800}
+    .timer .lbl{font-size:12px;color:var(--muted)}
+
+    .note{margin-top:12px;background:linear-gradient(180deg,#fff,#FFF8F4);padding:10px;border-radius:10px;border-left:4px solid rgba(166,124,84,0.12);color:var(--muted)}
+
+    .pricing{margin-top:12px;background:linear-gradient(180deg,#fff,#FDF6F0);padding:12px;border-radius:10px;text-align:center;border:1px solid rgba(160,130,100,0.04)}
+    .pricing .promo{font-weight:800;color:#B33F2E;font-size:20px}
+    .pricing .normal{color:var(--muted);text-decoration:line-through;margin-left:8px;font-size:13px}
+
+    .promo-img{margin-top:12px;position:relative}
+    .promo-img img{width:100%;border-radius:10px}
+    .promo-badge{position:absolute;left:12px;top:12px;background:var(--mocha);color:#fff;padding:8px 12px;border-radius:999px;font-weight:700;box-shadow:0 8px 28px rgba(100,60,30,0.12)}
+
+    .embed{margin-top:12px;padding:8px}
+    .embed .ooef{background:linear-gradient(180deg,#fff,#FFF6F2);padding:12px;border-radius:10px;border:1px solid rgba(160,130,100,0.04)}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px;padding-bottom:20px}
+
+    /* fade-in animation */
+    .fade {opacity:0;transform:translateY(8px);transition:opacity .6s ease,transform .6s ease}
+    .fade.show {opacity:1;transform:none}
+
+    @media (max-width:360px){h1{font-size:18px}.sizes{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="card hero fade" id="hero">
+      <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0q-mdiw8w9hn8um61.webp" alt="lace hotpants - hero">
+    </div>
+
+    <div class="card section fade" id="intro">
+      <h1>lace hotpants</h1>
+      <p class="lead">Temukan Kenyamanan Maksimal Dengan Celana Dalam Wanita Model Hotpants Boxer Super Jumbo.</p>
+      <p class="desc">Terbuat dari bahan lembut dan elastis yang adem, cocok untuk digunakan harian, tidur, maupun saat beraktivitas. Desain short pants kekinian yang menutup bagian belakang dengan sempurna membuat kamu lebih percaya diri dan bebas bergerak.</p>
+
+      <div class="sizes">
+        <div class="size"><b>Size M</b><div>Lingkar Pinggang 70–74 cm<br>Berat 45–55 kg</div></div>
+        <div class="size"><b>Size L</b><div>Lingkar Pinggang 74–78 cm<br>Berat 55–65 kg</div></div>
+        <div class="size"><b>Size XL</b><div>Lingkar Pinggang 78–82.5 cm<br>Berat 65–75 kg</div></div>
+        <div class="size"><b>Size XXL</b><div>Lingkar Pinggang 82.5–87.5 cm<br>Berat 75–85 kg</div></div>
+        <div class="size" style="grid-column:1/3"><b>Size XXXL</b><div>Lingkar Pinggang 87.5–93 cm<br>Berat 85–95 kg</div></div>
+      </div>
+    </div>
+
+    <div class="card section fade" id="keunggulan">
+      <div class="details">
+        <h3>Detail & Keunggulan</h3>
+        <ul>
+          <li>Desain modern dan simple, cocok untuk semua usia</li>
+          <li>Bahan adem, lembut dan elastis mengikuti bentuk tubuh</li>
+          <li>Menutup sempurna, tidak menerawang</li>
+          <li>Tersedia dalam berbagai warna dan motif menarik</li>
+        </ul>
+      </div>
+
+      <div class="gallery">
+        <div>
+          <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdiw8wddiyz32c.webp" alt="detail 1">
+          <div class="caption">Potongan hotpants yang menutup sempurna dan nyaman.</div>
+        </div>
+        <div>
+          <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdiw8w9rpnq061.webp" alt="detail 2">
+          <div class="caption">Bahan elastis & lembut, ideal untuk aktivitas seharian.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card section fade" id="testimoni">
+      <h3 style="text-align:center;color:var(--mocha)">Testimoni Pelanggan</h3>
+      <div class="testi">
+        <div class="bubble">
+          <div class="name">Alya, Bandung</div>
+          <div class="text">"Nyaman banget dipakai tidur maupun aktivitas. Jahitannya rapi dan nggak bikin gerah. Sudah repurchase! ⭐⭐⭐⭐⭐"</div>
+        </div>
+        <div class="bubble" style="margin-top:10px">
+          <div class="name">Mira, Jakarta</div>
+          <div class="text">"Ukuran sesuai dan menutup dengan rapi. Bahannya lembut, cocok untuk kulit sensitif."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card section fade" id="promo">
+      <div style="text-align:center;font-weight:700;color:var(--mocha)">Promo Berakhir Dalam:</div>
+      <div class="timer" id="countdown">
+        <div class="box"><div class="num" id="d">00</div><div class="lbl">hari</div></div>
+        <div class="box"><div class="num" id="h">00</div><div class="lbl">jam</div></div>
+        <div class="box"><div class="num" id="m">00</div><div class="lbl">menit</div></div>
+        <div class="box"><div class="num" id="s">00</div><div class="lbl">detik</div></div>
+      </div>
+
+      <div class="note">
+        <div style="font-weight:700;color:var(--mocha);margin-bottom:6px">Catatan Pemesanan & Pengiriman</div>
+        <div>• Pengiriman 2 - 4 Hari Setelah Pemesanan<br>• Mohon Isi Alamat Dengan Lengkap<br>• 100% Product Original</div>
+      </div>
+
+      <div class="pricing">
+        <div style="font-weight:700;color:var(--mocha);">PROMO SPESIAL HARI INI</div>
+        <div style="margin-top:8px;color:var(--muted)">Dapatkan Diskon Spesial Untuk Hari Ini Saja — Harga Akan Kembali Normal Setelah Promo</div>
+        <div style="display:flex;justify-content:space-between;gap:8px;margin-top:12px">
+          <div style="flex:1;background:linear-gradient(180deg,#fff,#F9F3EE);padding:10px;border-radius:8px;text-align:center;border:1px solid rgba(160,130,100,0.04)"><div class="promo">Rp 155.000</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Paket isi 3 pcs</div></div>
+          <div style="flex:1;background:linear-gradient(180deg,#fff,#F9F3EE);padding:10px;border-radius:8px;text-align:center;border:1px solid rgba(160,130,100,0.04)"><div class="promo">Rp 185.000</div><div style="font-size:13px;color:var(--muted);margin-top:6px">Paket isi 6 pcs</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card section fade" id="promo-img">
+      <div class="promo-img">
+        <img src="https://i.postimg.cc/K8xMnLdG/codgif-ezgif-com-crop.gif" alt="promo gif">
+        <div class="promo-badge">DISKON SPESIAL — ORDER SEKARANG</div>
+      </div>
+    </div>
+
+    <div class="card section fade embed" id="embed">
+      <div class="ooef">
+        <form class="orderonline-embed-form" data-username="vita" data-product-slug="lace-hotpants" data-product-id="68f7981c1e10e6aa540abcea" id="oo-embed-form-lace-hotpants-6338" data-origin="orderonline">
+          <div class="ooef-loader"><div aria-live="polite" role="status"><div>Loading...</div></div></div>
+        </form>
+      </div>
+    </div>
+
+    <footer>© <span id="year"></span> Vita • Mocha Modest</footer>
+  </div>
+
+  <script>
+    // show fade-in on scroll
+    document.addEventListener('DOMContentLoaded', function(){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }});
+      },{threshold:0.12});
+      document.querySelectorAll('.fade').forEach(function(el){ io.observe(el); });
+
+      // set year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // countdown
+      var end = new Date(); end.setHours(23,59,59,999); if(new Date()>end) end.setDate(end.getDate()+1);
+      function update(){ var now=new Date(); var diff=Math.max(0,end-now); var days=Math.floor(diff/86400000); var hours=Math.floor((diff/3600000)%24); var mins=Math.floor((diff/60000)%60); var secs=Math.floor((diff/1000)%60); document.getElementById('d').textContent=String(days).padStart(2,'0'); document.getElementById('h').textContent=String(hours).padStart(2,'0'); document.getElementById('m').textContent=String(mins).padStart(2,'0'); document.getElementById('s').textContent=String(secs).padStart(2,'0'); }
+      update(); setInterval(update,1000);
+
+      // init OrderOnline embed
+      if (typeof xEmbedInit == 'function') { try { xEmbedInit(window); } catch(e){} }
+    });
+  </script>
+</body>
+</html>
