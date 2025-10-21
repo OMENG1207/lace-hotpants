@@ -1,372 +1,271 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Lace Hotpants — Mocha Modest (Mobile)</title>
-  <meta name="description" content="Lace Hotpants — Hotpants boxer super jumbo. Lembut, adem, nyaman untuk sehari-hari." />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lace Hotpants | Premium Landing Page</title>
   <style>
-    /* -------------------------
-       Color scheme: Mocha Modest
-       Soft feminine mobile-first
-       ------------------------- */
-    :root{
-      --bg: #FBF7F5;
-      --card: #FFF9F6;
-      --mocha: #6B4F3B;
-      --accent: #EEDFD2;
-      --muted: #7F6758;
-      --radius: 14px;
-      --soft-shadow: 0 8px 24px rgba(60,40,30,0.06);
-      --glass: rgba(255,255,255,0.6);
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f4f1;
+      color: #4a3c32;
+      line-height: 1.6;
     }
 
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);color:var(--mocha);-webkit-font-smoothing:antialiased}
-    a{color:inherit}
-    /* page wrapper centered for mobile */
-    .wrap{max-width:460px;margin:12px auto;padding:12px}
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fffaf7;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
 
-    /* card sections */
-    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--soft-shadow);overflow:hidden;margin-bottom:14px}
-    .section{padding:14px}
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-    /* hero image: show original size responsively */
-    .hero img{display:block;width:100%;height:auto;object-fit:contain}
+    h1 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 1rem 0 0.5rem;
+      color: #3b2d24;
+    }
 
-    /* title & lead */
-    h1{font-size:20px;margin:8px 0;color:var(--mocha);line-height:1.15}
-    .lead{color:var(--muted);font-size:14px;margin:6px 0}
-    .desc{color:#3b2d25;font-size:14px;line-height:1.6}
+    p {
+      padding: 0 1.2rem;
+      font-size: 0.95rem;
+      text-align: justify;
+      margin-bottom: 1rem;
+    }
 
-    /* sizes grid */
-    .sizes{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
-    .size{background:linear-gradient(180deg,var(--accent),#fff);padding:10px;border-radius:10px;border:1px solid rgba(120,90,70,0.06);font-size:13px}
-    .size b{display:block;color:var(--mocha);margin-bottom:6px}
+    .section {
+      padding: 1rem;
+    }
 
-    /* details & gallery */
-    .details ul{padding-left:16px;margin:8px 0;color:#3b2d25}
-    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
-    .gallery img{width:100%;height:auto;border-radius:10px}
-    .caption{font-size:13px;color:var(--muted);text-align:center;margin-top:6px}
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+    ul li::before {
+      content: "• ";
+      color: #b88b67;
+    }
 
-    /* testimonials */
-    .testi h3{text-align:center;color:var(--mocha);margin-bottom:10px}
-    .bubble{background:linear-gradient(180deg,#fff,#FFF8F6);padding:12px;border-radius:12px;border:1px solid rgba(160,130,110,0.05);margin-bottom:10px}
-    .bubble .name{font-weight:700;color:var(--mocha);margin-bottom:6px}
-    .bubble .text{color:#3b2d25;font-size:14px;line-height:1.5}
+    .product-detail img {
+      margin-bottom: 0.5rem;
+      border-radius: 8px;
+    }
 
-    /* promo / countdown */
-    .promo-row{display:flex;gap:8px}
-    .countdown{display:flex;gap:8px;justify-content:center;margin-top:12px}
-    .countdown .box{background:#fff;padding:10px 12px;border-radius:10px;min-width:64px;text-align:center;box-shadow:0 6px 18px rgba(40,30,20,0.04)}
-    .countdown .num{font-weight:800;font-size:16px;color:var(--mocha)}
-    .countdown .lbl{font-size:12px;color:var(--muted)}
+    .testimonial {
+      background: #f6ede7;
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 1rem;
+    }
 
-    .promo-note{background:linear-gradient(180deg,#fff,#FFF6F2);padding:12px;border-radius:10px;border:1px solid rgba(160,130,100,0.04);margin-top:12px;text-align:center}
+    .testimonial p {
+      font-style: italic;
+      text-align: center;
+      margin: 0.5rem 0;
+    }
 
-    /* pricing cards */
-    .pricing{display:flex;gap:10px;margin-top:12px}
-    .pricing .pkg{flex:1;background:#fff;padding:12px;border-radius:10px;border:1px solid rgba(160,130,100,0.04);text-align:center}
-    .pricing .price{font-weight:800;color:#B33F2E;font-size:18px}
-    .pricing .label{font-size:13px;color:var(--muted);margin-top:6px}
+    .promo-timer {
+      text-align: center;
+      background: #f1d5bb;
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 1rem;
+    }
 
-    /* promo image above form */
-    .promo-img{position:relative;margin-top:12px}
-    .promo-img img{width:100%;border-radius:10px}
-    .promo-badge{position:absolute;left:12px;top:12px;background:var(--mocha);color:#fff;padding:8px 12px;border-radius:999px;font-weight:700;font-size:13px;box-shadow:0 8px 28px rgba(60,40,20,0.12)}
+    .note {
+      background: #f8eee8;
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 1rem;
+      font-size: 0.9rem;
+    }
 
-    /* embed/form card */
-    .embed-card{background:linear-gradient(180deg,#fff,#FFF7F2);padding:14px;border-radius:12px;border:1px solid rgba(160,130,100,0.06)}
-    .embed-card h3{text-align:center;color:var(--mocha);margin:4px 0 10px}
+    .price-section {
+      text-align: center;
+      background: #fdf7f2;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 1rem;
+    }
 
-    /* fallback message when embed not loaded */
-    .embed-fallback{font-size:14px;color:var(--muted);text-align:center;padding:10px;border-radius:8px;background:#FFF8F6;border:1px dashed rgba(170,130,100,0.08)}
+    .price-section h3 {
+      margin-bottom: 0.5rem;
+      color: #3b2d24;
+    }
 
-    /* fade-in animation */
-    .fade{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
-    .fade.show{opacity:1;transform:none}
+    .price-section p {
+      margin: 0.2rem 0;
+    }
 
-    footer{font-size:13px;color:var(--muted);text-align:center;padding:18px 8px}
+    .discount-banner {
+      text-align: center;
+      margin: 1.5rem;
+    }
 
-    /* responsive tweaks */
-    @media (max-width:420px){
-      .sizes{grid-template-columns:1fr}
-      header h1{font-size:20px}
+    .discount-banner img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      h1 { font-size: 1.3rem; }
+      p { font-size: 0.9rem; }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
 
-    <!-- 1. Gambar Utama -->
-    <div class="card fade" id="heroCard">
-      <div class="hero">
-        <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0q-mdiw8w9hn8um61.webp" alt="lace hotpants - hero">
-      </div>
-    </div>
+  <div class="container">
+    <!-- Gambar Utama -->
+    <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0q-mdiw8w9hn8um61.webp" alt="Lace Hotpants">
 
-    <!-- 2. Judul & Deskripsi -->
-    <div class="card section fade" id="introCard">
+    <!-- Judul & Deskripsi -->
+    <div class="section">
       <h1>Lace Hotpants</h1>
-      <p class="lead">Temukan Kenyamanan Maksimal Dengan Celana Dalam Wanita Model Hotpants Boxer Super Jumbo.</p>
-      <p class="desc">
-        Terbuat Dari Bahan Lembut Dan Elastis Yang Adem, Cocok Untuk Digunakan Harian, Tidur, Maupun Saat Beraktivitas.
-        Desain Short Pants Cewek Kekinian Yang Menutup Bagian Belakang Dengan Sempurna Membuat Kamu Lebih Percaya Diri Dan Bebas Bergerak.
-      </p>
+      <p>Temukan kenyamanan maksimal dengan <strong>Celana Dalam Wanita Model Hotpants Boxer Super Jumbo</strong>.
+      Terbuat dari bahan lembut dan elastis yang adem, cocok digunakan harian, tidur, maupun saat beraktivitas.</p>
+      <p>Desain short pants cewek kekinian yang menutup bagian belakang dengan sempurna membuat kamu lebih percaya diri dan bebas bergerak.</p>
 
-      <div class="sizes" aria-label="Ukuran">
-        <div class="size"><b>Size M</b>Lingkar Pinggang: 70–74 cm<br>Berat: 45–55 kg</div>
-        <div class="size"><b>Size L</b>Lingkar Pinggang: 74–78 cm<br>Berat: 55–65 kg</div>
-        <div class="size"><b>Size XL</b>Lingkar Pinggang: 78–82.5 cm<br>Berat: 65–75 kg</div>
-        <div class="size"><b>Size XXL</b>Lingkar Pinggang: 82.5–87.5 cm<br>Berat: 75–85 kg</div>
-        <div class="size" style="grid-column:1/3"><b>Size XXXL</b>Lingkar Pinggang: 87.5–93 cm<br>Berat: 85–95 kg</div>
-      </div>
+      <p><strong>Size M</strong><br>Lingkar Pinggang: 70–74 cm | BB: 45–55 kg</p>
+      <p><strong>Size L</strong><br>Lingkar Pinggang: 74–78 cm | BB: 55–65 kg</p>
+      <p><strong>Size XL</strong><br>Lingkar Pinggang: 78–82.5 cm | BB: 65–75 kg</p>
+      <p><strong>Size XXL</strong><br>Lingkar Pinggang: 82.5–87.5 cm | BB: 75–85 kg</p>
+      <p><strong>Size XXXL</strong><br>Lingkar Pinggang: 87.5–93 cm | BB: 85–95 kg</p>
     </div>
 
-    <!-- 3. Detail & Keunggulan -->
-    <div class="card section fade" id="detailsCard">
-      <div class="details">
-        <h3 style="color:var(--mocha);margin-bottom:8px">Detail & Keunggulan</h3>
-        <ul>
-          <li>Desain Modern Dan Simple, Cocok Untuk Semua Usia</li>
-          <li>Bahan Adem, Lembut Dan Elastis, Mengikuti Bentuk Tubuh</li>
-          <li>Menutup Sempurna, Tidak Menerawang</li>
-          <li>Tersedia Dalam Berbagai Warna Dan Motif Menarik</li>
-        </ul>
-      </div>
+    <!-- Keunggulan -->
+    <div class="section">
+      <h3>✨ Detail & Keunggulan Produk ✨</h3>
+      <ul>
+        <li>Desain modern dan simple, cocok untuk semua usia</li>
+        <li>Bahan adem, lembut dan elastis mengikuti bentuk tubuh</li>
+        <li>Menutup sempurna, tidak menerawang</li>
+        <li>Tersedia dalam berbagai warna dan motif menarik</li>
+      </ul>
     </div>
 
-    <!-- 4. Detail produk berisi gambar + keterangan -->
-    <div class="card section fade" id="galleryCard">
-      <div class="gallery" aria-label="Gambar Detail Produk">
-        <div>
-          <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdiw8wddiyz32c.webp" alt="Detail 1 — bahan lembut">
-          <div class="caption">Potongan hotpants yang nyaman & menutup sempurna.</div>
-        </div>
-        <div>
-          <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdiw8w9rpnq061.webp" alt="Detail 2 — bahan elastis">
-          <div class="caption">Bahan elastis & lembut, ideal untuk kegiatan sehari-hari.</div>
-        </div>
-      </div>
+    <!-- Detail Produk -->
+    <div class="section product-detail">
+      <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0m-mdiw8wddiyz32c.webp" alt="Detail 1">
+      <p>Tampilan detail bahan lembut dan halus</p>
+      <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0l-mdiw8w9rpnq061.webp" alt="Detail 2">
+      <p>Model kekinian yang menutup sempurna</p>
     </div>
 
-    <!-- 5. Testimoni -->
-    <div class="card section fade" id="testiCard">
-      <div class="testi">
-        <h3>Testimoni Pelanggan</h3>
-
-        <div class="bubble" aria-live="polite">
-          <div class="name">Aulia, Bandung</div>
-          <div class="text">"Bahan lembut banget, dipakai seharian nggak gerah. Potongannya pas, langganan deh!"</div>
-        </div>
-
-        <div class="bubble">
-          <div class="name">Rini, Surabaya</div>
-          <div class="text">"Kualitas jahitan rapi dan nyaman. Paket sampai rapi & cepat. Recommended."</div>
-        </div>
-      </div>
+    <!-- Testimoni -->
+    <div class="testimonial">
+      <h3>💬 Testimoni Pelanggan</h3>
+      <p>“Bahannya lembut banget dan adem dipakai, jahitannya juga rapih. Ukuran pas sesuai deskripsi!” – <strong>Dewi, Bandung</strong></p>
+      <p>“Aku beli 6 pcs, semuanya bagus dan nyaman. Nggak nyesel beli di sini!” – <strong>Lina, Surabaya</strong></p>
+      <p>“Modelnya simple tapi elegan, cocok buat dipakai harian.” – <strong>Putri, Medan</strong></p>
     </div>
 
-    <!-- 6. Kolom waktu promo berakhir (realtime) + static note -->
-    <div class="card section fade" id="promoCard">
-      <div style="text-align:center;font-weight:700;color:var(--mocha)">Promo Berakhir Dalam</div>
-
-      <!-- realtime countdown -->
-      <div class="countdown" role="timer" aria-atomic="true" aria-live="polite" id="countdown">
-        <div class="box"><div class="num" id="cd-days">00</div><div class="lbl">hari</div></div>
-        <div class="box"><div class="num" id="cd-hours">00</div><div class="lbl">jam</div></div>
-        <div class="box"><div class="num" id="cd-mins">00</div><div class="lbl">menit</div></div>
-        <div class="box"><div class="num" id="cd-secs">00</div><div class="lbl">detik</div></div>
-      </div>
-
-      <!-- static text version (also shown) -->
-      <div class="promo-note" style="margin-top:12px">
-        <strong>Promo Spesial Hari Ini:</strong> Dapatkan diskon spesial — harga akan kembali normal setelah periode promo.
-      </div>
+    <!-- Waktu Promo -->
+    <div class="promo-timer">
+      <h3>⏰ Promo Berakhir Dalam:</h3>
+      <p><strong>02:14:36</strong> (Jam : Menit : Detik)</p>
+      <small>Jangan sampai kehabisan!</small>
     </div>
 
-    <!-- 7. Note pemesanan & pengiriman -->
-    <div class="card section fade" id="noteCard">
-      <div class="note">
-        <strong>Catatan Pemesanan & Pengiriman</strong><br>
-        • Pengiriman 2 - 4 Hari Setelah Pemesanan<br>
-        • Mohon Isi Alamat Dengan Lengkap<br>
-        • 100% Product Original
-      </div>
+    <!-- Note Pengiriman -->
+    <div class="note">
+      <h4>📦 Catatan Pemesanan & Pengiriman</h4>
+      <ul>
+        <li>Pengiriman 2 - 4 hari setelah pemesanan</li>
+        <li>Mohon isi alamat dengan lengkap</li>
+        <li>100% Produk Original</li>
+      </ul>
     </div>
 
-    <!-- 8. Harga produk (1 layout) -->
-    <div class="card section fade" id="priceCard">
-      <div style="text-align:center;font-weight:700;color:var(--mocha)">PROMO SPESIAL HARI INI</div>
-      <div style="color:var(--muted);text-align:center;margin-top:6px">Dapatkan Diskon Spesial Untuk Hari Ini Saja — Harga Akan Kembali Normal Setelah Promo</div>
-
-      <div class="pricing" aria-label="Harga Paket">
-        <div class="pkg">
-          <div class="price">Rp 155.000</div>
-          <div class="label">Paket isi 3 pcs</div>
-        </div>
-        <div class="pkg">
-          <div class="price">Rp 185.000</div>
-          <div class="label">Paket isi 6 pcs</div>
-        </div>
-      </div>
-
-      <div style="text-align:center;margin-top:10px;color:var(--muted)">Anda Hemat — pilih paket hemat sesuai kebutuhan</div>
+    <!-- Harga -->
+    <div class="price-section">
+      <h3>💝 PROMO SPESIAL HARI INI 💝</h3>
+      <p>Dapatkan Diskon Spesial Untuk Hari Ini Saja!<br>Harga Akan Kembali Normal Setelah:</p>
+      <p><strong>Paket Isi 3 PCS - Rp 155.000</strong></p>
+      <p><strong>Paket Isi 6 PCS - Rp 185.000</strong></p>
+      <p>✨ Anda Hemat Banyak! ✨</p>
     </div>
 
-    <!-- 9. Gambar promo di atas form -->
-    <div class="card section fade" id="promoImgCard">
-      <div class="promo-img">
-        <img src="https://i.postimg.cc/K8xMnLdG/codgif-ezgif-com-crop.gif" alt="Promo COD / Diskon">
-        <div class="promo-badge">DISKON SPESIAL</div>
-      </div>
+    <!-- Gambar Promo -->
+    <div class="discount-banner">
+      <img src="https://i.postimg.cc/K8xMnLdG/codgif-ezgif-com-crop.gif" alt="Promo Diskon">
     </div>
 
-    <!-- 10. Form Pemesanan (embed) — lazy loaded + fade-in -->
-    <div class="card section fade" id="formCard" aria-live="polite">
-      <div class="embed-card" id="embedCardInner">
-        <h3>✨ Form Pemesanan Lace Hotpants ✨</h3>
-
-        <!-- original embed code provided by user (v8.0.4) -->
-        <div id="orderonline-embed-wrapper">
-          <!-- placeholder loader so layout reserved -->
-          <div class="embed-fallback">Form pemesanan akan dimuat saat Anda menggulir ke bagian ini...</div>
-        </div>
-
+    <!-- Form Pemesanan -->
+    <div class="order-form section">
+      <!-- OrderOnline Embed Code - v8.0.4 -->
+      <div class="ooef">
+        <form class="orderonline-embed-form" data-username="vita" data-product-slug="lace-hotpants" data-product-id="68f7981c1e10e6aa540abcea" id="oo-embed-form-lace-hotpants-6338" data-origin="orderonline">
+          <div class="ooef-loader">
+            <style>
+              .ooef-loader{visibility:hidden;opacity:0;position:absolute;left:0;right:0;top:0;bottom:0;display:flex;justify-content:center;align-items:center;flex-direction:column;animation:ooLoadingIn 10s ease;-webkit-animation:ooLoadingIn 10s ease;animation-fill-mode:forwards;overflow:hidden}
+              @keyframes ooLoadingIn{0%{visibility:hidden;opacity:0}20%{visibility:visible;opacity:0}100%{visibility:visible;opacity:1}}
+              .ooef-loader>div{border-radius:50%;width:2.5rem;height:2.5rem;border:.25rem solid #f5f5f5;border-left:.25rem solid #b88b67;animation:ooLoading 1.1s infinite linear}
+              @keyframes ooLoading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+            </style>
+            <div aria-live="polite" role="status"><div>Loading...</div></div>
+          </div>
+        </form>
       </div>
-    </div>
-
-    <footer>
-      © <span id="year"></span> Vita • Mocha Modest
-    </footer>
-  </div>
-
-  <!-- JS: countdown + lazy-load embed + animations -->
-  <script>
-    // ---------- Fade-in observer for sections ----------
-    (function(){
-      const observeEls = document.querySelectorAll('.fade');
-      const io = new IntersectionObserver((entries, obs) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            e.target.classList.add('show');
-            obs.unobserve(e.target);
-          }
-        });
-      }, {threshold: 0.12});
-      observeEls.forEach(el => io.observe(el));
-    })();
-
-    // ---------- Countdown (realtime) ----------
-    (function(){
-      // Set promo end time: today 23:59:59 local time (can be adjusted)
-      let end = new Date();
-      end.setHours(23,59,59,999);
-      if (new Date() > end) { end.setDate(end.getDate() + 1); } // if already past, tomorrow
-
-      function updateCountdown(){
-        const now = new Date();
-        let diff = Math.max(0, end - now);
-
-        const days = Math.floor(diff / (1000*60*60*24));
-        const hours = Math.floor((diff / (1000*60*60)) % 24);
-        const mins = Math.floor((diff / (1000*60)) % 60);
-        const secs = Math.floor((diff / 1000) % 60);
-
-        document.getElementById('cd-days').textContent = String(days).padStart(2,'0');
-        document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
-        document.getElementById('cd-mins').textContent = String(mins).padStart(2,'0');
-        document.getElementById('cd-secs').textContent = String(secs).padStart(2,'0');
-      }
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-    })();
-
-    // ---------- Lazy-load OrderOnline embed when #formCard visible ----------
-    (function(){
-      const wrapper = document.getElementById('orderonline-embed-wrapper');
-      const formCard = document.getElementById('formCard');
-
-      const loaderHTML = `<!-- OrderOnline Embed Code - v8.0.4 -->
-        <div class="ooef">
-          <form class="orderonline-embed-form" data-username="vita" data-product-slug="lace-hotpants" data-product-id="68f7981c1e10e6aa540abcea" id="oo-embed-form-lace-hotpants-6338" data-origin="orderonline">
-            <div class="ooef-loader">
-              <style>
-                .ooef-loader{visibility:hidden;opacity:0;position:absolute;left:0;right:0;top:0;bottom:0;display:flex;justify-content:center;align-items:center;flex-direction:column;animation:ooLoadingIn 10s ease;-webkit-animation:ooLoadingIn 10s ease;animation-fill-mode:forwards;overflow:hidden}
-                @keyframes ooLoadingIn{0%{visibility:hidden;opacity:0}20%{visibility:visible;opacity:0}100%{visibility:visible;opacity:1}}
-                @-webkit-keyframes ooLoadingIn{0%{visibility:hidden;opacity:0}20%{visibility:visible;opacity:0}100%{visibility:visible;opacity:1}}
-                .ooef-loader>div,.ooef-loader>div:after{border-radius:50%;width:2.5rem;height:2.5rem}
-                .ooef-loader>div{font-size:10px;position:relative;text-indent:-9999em;border:.25rem solid #f5f5f5;border-left:.25rem solid #55c4cf;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-animation:ooLoading 1.1s infinite linear;animation:ooLoading 1.1s infinite linear}
-                .ooef-loader.error>div{border-left:.25rem solid #ff4500;animation-duration:5s}
-                @-webkit-keyframes ooLoading{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
-                @keyframes ooLoading{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
-              </style>
-              <div aria-live="polite" role="status"><div>Loading...</div></div>
-            </div>
-          </form>
-        </div>
-        <script>
-          if (typeof xLogError != 'function') {
-            var xLogError = function (error) {
-              var req = new XMLHttpRequest();
-              var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
-              var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
-              req.open('POST', 'https://api.orderonline.id/log', true);
-              req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-              req.send(params);
-            };
-          }
-          try {
-            if (typeof xEmbedScript != 'function') {
-              var xEmbedScript = function () {
-                !function(w, d, e, v, id, t, s) {
-                  if (d.getElementById(id)) return;
-                  t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
-                }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
-              };
-            }
-            if (typeof xEmbedInit != 'function') {
-              var xEmbedInit = function (w, n) {
-                if (w.ooe) return;
-                n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) };
-                if (!w._ooe) w._ooe = n;
-                n.push = n; n.loaded = !0; n.version = '8.0.4'; n.queue = [];
-              };
-            }
-            xEmbedInit(window);
-            ooe('setup', 'redirect', 'https://vita.orderonline.id');
-            ooe('init', '5f1a8627a9bf8058b0424f32', '68f7981c1e10e6aa540abcea', '68f7981c1e10e6aa540abceb', 'oo-embed-form-lace-hotpants-6338', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false});
-            if (!window.jQuery) {
+      <script>
+        if (typeof xLogError != 'function') {
+          var xLogError = function (error) {
+            var req = new XMLHttpRequest();
+            var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
+            var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+            req.open('POST', 'https://api.orderonline.id/log', true);
+            req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            req.send(params);
+          };
+        }
+        try {
+          if (typeof xEmbedScript != 'function') {
+            var xEmbedScript = function () {
               !function(w, d, e, v, id, t, s) {
                 if (d.getElementById(id)) return;
-                t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript);
+                t = d.createElement(e); t.async = !0; t.src = v; t.id = id;
                 s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
-              }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
-            } else { xEmbedScript(); }
-          } catch (e) { xLogError(e); throw e; }
-        </script>`;
-
-      // IntersectionObserver to lazy-load embed when visible
-      const obs = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // inject loader + embed script
-            wrapper.innerHTML = loaderHTML;
-
-            // ensure embed script is requested (some hosts require direct script tag)
-            // (the embed loader inside loaderHTML will also request its own script)
-            observer.unobserve(entry.target);
+              }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+            };
           }
-        });
-      }, { threshold: 0.35 });
+          if (typeof xEmbedInit != 'function') {
+            var xEmbedInit = function (w, n) {
+              if (w.ooe) return;
+              n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) };
+              if (!w._ooe) w._ooe = n;
+              n.push = n; n.loaded = !0; n.version = '8.0.4'; n.queue = [];
+            };
+          }
+          xEmbedInit(window);
+          ooe('setup', 'redirect', 'https://vita.orderonline.id');
+          ooe('init', '5f1a8627a9bf8058b0424f32', '68f7981c1e10e6aa540abcea', '68f7981c1e10e6aa540abceb', 'oo-embed-form-lace-hotpants-6338', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":false,"triggerGtm":false});
+          if (!window.jQuery) {
+            !function(w, d, e, v, id, t, s) {
+              if (d.getElementById(id)) return;
+              t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+              t.addEventListener('load', xEmbedScript);
+              s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+            }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+          } else {
+            xEmbedScript();
+          }
+        } catch (e) {
+          xLogError(e); throw e;
+        }
+      </script>
+      <!-- End OrderOnline Embed Code -->
+    </div>
+  </div>
 
-      obs.observe(formCard);
-    })();
-
-    // set year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
